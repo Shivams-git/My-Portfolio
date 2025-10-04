@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam Kumar | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #b3c9ec);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #8167b9, #2a078b);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: rgb(230, 228, 233);
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d0f805;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #222;
+      font-size: 2em;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1269c0, #11cbcb);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Design Shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .shape1 {
+      width: 200px;
+      height: 200px;
+      background: #cf1e0e;
+      top: 100px;
+      left: -100px;
+    }
+
+    .shape2 {
+      width: 150px;
+      height: 150px;
+      background: #5988b1;
+      bottom: 200px;
+      right: -75px;
+    }
+
+    .shape3 {
+      width: 70px;
+      height: 70px;
+      background: #3f66a9;
+      top: 500px;
+      right: 50px;
+    }
+
+    .shape4 {
+      width: 100px;
+      height: 100px;
+      background: #450975;
+      top: 800px;
+      right: 20px;
+    }
+
+    .shape5 {
+      width: 300px;
+      height: 300px;
+      background: #aa9cc4;
+      bottom: -150px;
+      left: -150px;
+    }
+
+    .shape6 {
+      width: 250px;
+      height: 250px;
+      background: #6a11cb;
+      top: -125px;
+      right: -125px;
+    }
+
+    a {
+      color: #2575fc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div style="display: flex; flex-direction: column; align-items: left; margin-bottom: -170px;">
+      <img src="MY DP.jpg" alt="Profile Avatar"
+        style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 3px solid #b8a7fd; box-shadow: 0 4px 18px 0 rgba(50, 50, 93, 0.18);" />
+    </div>
+    <h1>Shivam Kumar</h1>
+    <p>Software Engineer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
+    <div class="shape shape5"></div>
+    <div class="shape shape6"></div>
+
+    <section id="about">
+
+
+      <h2>About Me</h2>
+      <div class="card">
+        <p>Hello! I am <strong>Shivam Kumar</strong>, a passionate Software Engineer who enjoys building scalable,
+          efficient, and user-friendly applications. My focus is on clean code and creative solutions.</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>A personal portfolio website designed with modern HTML & CSS styles.</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Some Projects made with Java</h3><br>
+        <p>(1) Simple Alarm Clock</p><br>
+        <p>(2) Number Guessing Game</p><br>
+        <p>(3) Rock-Paper-Scissors Game</p><br>
+        <p>(4) Slot Machine Game</p>
+      </div>
+      <div class="card">
+        <h3>📚 Data Structures & Algorithms</h3>
+        <p>Implemented various data structures and algorithms in Java to enhance problem-solving skills.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="https://mail.google.com/mail/u/0/#all?compose=new"
+            target="_blank">Shivam2025pro@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-kumar-47b3a9367/"
+            target="_blank">linkedin.com/in/shivam</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Shivam Kumar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
