@@ -1,23 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shivam Kumar | Portfolio</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      color: #222;
-      background: linear-gradient(135deg,#f5f7fa,#b3c9ec);
+      color: #e0e6f0;
+      background: linear-gradient(135deg, rgb(82, 0, 0), rgb(0, 67, 82), rgb(42, 0, 86));
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Decorative Circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(68, 0, 255, 0.221), transparent 70%);
+      animation: float 12s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    .circle:nth-child(1) {
+      width: 160px;
+      height: 160px;
+      top: 300px;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      width: 100px;
+      height: 100px;
+      top: 70%;
+      left: 20px;
+      animation-delay: 2s;
+    }
+
+    .circle:nth-child(3) {
+      width: 220px;
+      height: 220px;
+      top: 30%;
+      right: 10px;
+      animation-delay: 4s;
+    }
+
+    .circle:nth-child(4) {
+      width: 80px;
+      height: 80px;
+      bottom: 10%;
+      right: 5%;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     .site-header {
-      background: linear-gradient(135deg,#8167b9,#2a078b);
+      background: linear-gradient(135deg, #3b0764, #1d4ed8);
       color: #fff;
       position: relative;
+      z-index: 1;
     }
 
     .header-inner {
@@ -38,27 +99,27 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid rgba(255,255,255,0.22);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      border: 3px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
     }
 
     .header-right {
       flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      align-items: center;   /* 👈 centers name + tagline */
-      text-align: center;    /* 👈 centers text */
+      align-items: center;
+      text-align: center;
       gap: 8px;
     }
 
     .site-title h1 {
       font-size: clamp(1.4rem, 3vw, 2.4rem);
-      color: #f3efff;
+      color: #ffffff;
       margin: 0;
     }
 
     .tagline {
-      color: rgba(255,255,255,0.92);
+      color: rgba(255, 255, 255, 0.9);
       font-size: clamp(.95rem, 2.2vw, 1.05rem);
     }
 
@@ -69,16 +130,16 @@
     nav.site-nav a {
       display: inline-block;
       padding: 6px 10px;
-      color: rgba(255,255,255,0.95);
+      color: rgba(255, 255, 255, 0.95);
       margin: 0 6px;
       font-weight: 600;
       border-radius: 8px;
-      transition: background .18s ease, transform .15s ease;
+      transition: background .25s ease, transform .25s ease;
     }
 
     nav.site-nav a:hover {
-      background: rgba(255,255,255,0.08);
-      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-3px) scale(1.05);
     }
 
     main {
@@ -86,35 +147,57 @@
       margin: 28px auto;
       padding: 0 18px 60px;
       position: relative;
+      z-index: 1;
     }
 
-    section { margin-bottom: 28px; }
-    section h2 { font-size: 1.6rem; margin-bottom: 14px; color: #1f1f1f; text-align: center; }
+    section {
+      margin-bottom: 28px;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      color: #f0f0f0;
+      text-align: center;
+      transition: transform .25s ease, color .25s ease;
+    }
+
+    section h2:hover {
+      transform: scale(1.05);
+      color: #60a5fa;
+    }
 
     .card {
-      background: #fff;
+      background: linear-gradient(135deg, #2f2061a0, #2abc6e3b);
       border-radius: 12px;
       padding: 18px;
-      box-shadow: 0 6px 22px rgba(22,22,35,0.06);
+      box-shadow: 0 6px 22px rgba(22, 22, 35, 0.5);
       margin-left: 20px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      backdrop-filter: blur(6px);
     }
 
-    /* 👇 Added margin just for Java Projects card */
-    .projects-list .card + .card {
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(140, 0, 255, 0.466);
+    }
+
+    .projects-list .card+.card {
       margin-top: 20px;
     }
 
     footer {
-      background: linear-gradient(135deg,#1269c0,#11cbcb);
+      background: linear-gradient(135deg, #1d4ed8, #06b6d4);
       color: #fff;
       text-align: center;
       padding: 16px;
       border-radius: 6px;
       max-width: 900px;
       margin: 20px auto;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .header-inner {
         flex-direction: column;
@@ -122,21 +205,35 @@
         text-align: center;
         gap: 12px;
       }
-      .profile-img { width: 96px; height: 96px; }
+
+      .profile-img {
+        width: 96px;
+        height: 96px;
+      }
     }
-    ul{
+
+    ul {
       margin-left: 20px;
     }
   </style>
 </head>
+
 <body>
+  <!-- Decorative Circles -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <div class="profile-left">
         <img class="profile-img" src="MY DP.jpg" alt="Shivam Kumar profile photo" />
       </div>
       <div class="header-right">
-        <div class="site-title"><h1>Shivam Kumar</h1></div>
+        <div class="site-title">
+          <h1>Shivam Kumar</h1>
+        </div>
         <div class="tagline">Aspiring Software Developer</div>
         <nav class="site-nav">
           <a href="#about">About</a>
@@ -151,8 +248,9 @@
     <section id="about">
       <h2>About Me</h2>
       <div class="card">
-        <p>Hello! I am <strong>Shivam Kumar</strong>, an aspiring software developer currently studying Computer Science.
-           I enjoy building small projects in Java and web technologies while learning DSA and system design.</p>
+        <p>Hello! I am <strong>Shivam Kumar</strong>, an aspiring software developer currently studying Computer
+          Science.
+          I enjoy building small projects in Java and web technologies while learning DSA and system design.</p>
       </div>
     </section>
 
@@ -177,7 +275,8 @@
       <h2>Contact</h2>
       <div class="card">
         <p>Email: <a href="mailto:Shivam2025pro@gmail.com">Shivam2025pro@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-kumar-47b3a9367/" target="_blank">linkedin.com/in/shivam</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-kumar-47b3a9367/"
+            target="_blank">linkedin.com/in/shivam</a></p>
       </div>
     </section>
   </main>
@@ -186,4 +285,5 @@
     © 2025 Shivam Kumar — All rights reserved.
   </footer>
 </body>
+
 </html>
